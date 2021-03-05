@@ -1,5 +1,7 @@
 package com.renan.br.projectone.entity;
 
+import java.util.Set;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -14,4 +16,6 @@ public class User {
     private String name;
     private String email;
 
+    @ManyToMany
+    private Set<Role> roules;
 }
